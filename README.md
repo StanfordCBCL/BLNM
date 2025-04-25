@@ -1,4 +1,4 @@
-# BLNM.jl
+# BLNM
 
 _Python implementation of Branched Latent Neural Maps (BLNMs), a computational tool for generic functional mapping of physical processes to build accurate and efficient surrogate models._
 
@@ -40,4 +40,4 @@ This package can be seamlessly extended to include more than two branches involv
 
 ## License
 
-`BLNM.jl` is released under the MIT license.
+`BLNM` is released under the MIT license.
