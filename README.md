@@ -41,12 +41,12 @@ To tweak the model, edit the config dict near the bottom of train_AT.py:
 
 ```python
 config = {
-    "z_score_count":         12,    # Number of latent inputs
-    "neurons":               42,    # Neurons per hidden layer
-    "layers":                16,    # Total hidden layers
-    "lr":                 0.0005,   # Learning rate
-    "num_states":             5,    # Output dimensionality
-    "disentanglement_level":  2     # Layers before branches merge
+    "z_score_count":         12,
+    "neurons":               42,
+    "layers":                16,
+    "lr":                 0.0005,
+    "num_states":             5,
+    "disentanglement_level":  2
 }
 ```
 
@@ -72,6 +72,15 @@ config = {
   author={Salvador, M. and Kong, F. and Peirlinck, M. and Parker, D. and Chubb, H. and Dubin, A. and Marsden, A. L.},
   journal={Journal of the Royal Society Interface},
   year={2024}
+}
+```
+
+```bibtex
+@article{Martinez2025,
+  title={Full-field surrogate modeling of cardiac function encoding geometric variability},
+  author={Martinez, E. and Moscoloni, B. and Salvador, M. and Kong, F. and Peirlinck, M. and Marsden, A. L.},
+  journal={arXiv},
+  year={2025}
 }
 ```
 
