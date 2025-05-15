@@ -1,4 +1,4 @@
-# BLNM.py
+# BLNM.jl
 
 _Python implementation of Branched Latent Neural Maps (BLNMs), a computational tool for generic functional mapping of physical processes to build accurate and efficient surrogate models._
 
@@ -15,6 +15,43 @@ During the optimization process of the neural network tunable parameters, the Me
 Time and model parameters are also normalized during the training phase of the BLNM.
 
 This package can be seamlessly extended to include more than two branches involving different sets of inputs, such as space, time, model-specific parameters and geometrical features.
+
+## Getting Started
+
+This repository demonstrates combining physics-based cardiac electrophysiology simulations with Branched Latent Neural Maps (BLNMs). We train a BLNM to predict activation maps from space coordinates and z-scores.
+
+- **BLNM.py**  
+  Defines the BLNM architecture and utility functions.
+- **train_AT.py**  
+  Training script for the BLNM model.
+
+## Data
+
+- **Training data**: PKL files in `data/ToF/`
+- **Testing data**: PKL files in `data/ct/`
+- **Z-scores**: CSV in `data/z_scores/all_z_scores.csv`
+
+## Usage
+
+```python
+python3 train_AT.py
+```
+
+To tweak the model, edit the config dict near the bottom of train_AT.py:
+
+```python
+config = {
+    "z_score_count":         12,    # Number of latent inputs
+    "neurons":               42,    # Neurons per hidden layer
+    "layers":                16,    # Total hidden layers
+    "lr":                 0.0005,   # Learning rate
+    "num_states":             5,    # Output dimensionality
+    "disentanglement_level":  2     # Layers before branches merge
+}
+```
+
+- **Best model:** `best_model_overall.pth`
+- **Training logs**: `training/AT_predictions/AT_results.txt`
 
 ## References
 

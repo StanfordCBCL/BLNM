@@ -191,7 +191,7 @@ def save_txt(epoch_list, train_loss_list, test_loss_list, best_train_loss, best_
         print(f"Losses and configuration saved to {filename}")
 
 if __name__ == '__main__':   
-    num_points_test = 6442 
+    num_points_test = 6500
     num_points_train = 1485
 
     num_epochs = 1000
